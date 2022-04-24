@@ -1,0 +1,146 @@
+<app-header></app-header>
+
+The app component
+
+The data we received from the component
+
+{{ title }} {{ var1 + var2 }}
+<br/>
+BY Condition expression
+<br/>
+{{ 2 == 2 ? title : "Restrict"}}
+<br/>
+
+<br/>
+<img [src] = "2 == 2 ? imgSrc150 : imgSrc250" alt=""/>
+&nbsp;&nbsp;
+<img [src] = "3 == 3 ? imgSrc250 : imgSrc150" alt=""/>
+<br/>
+<br/>
+<img [src] = "imgSize == 150 ? imgSrc150 : imgSrc250" alt=""/>
+<br/>
+<br/>
+<img src="{{ imgSrc150 }}" alt=""/>
+
+<br/>
+<br/>
+
+<img [src]="imgSrc150" alt="" />
+
+<br/>
+<br/>
+
+<img [attr.src]="imgSrc150" alt="" />
+
+<br/>
+<br/>
+
+<img [src]="imgSrc150" alt="" />
+
+<br/>
+<br>
+
+<table [attr.border]="1">
+  <tr>
+    <td [attr.colspan]="cs">TD1</td>
+    <td>TD2</td>
+    <td>TD3</td>
+  </tr>
+  <tr>
+    <td>TD2</td>
+    <td>TD2</td>
+    <td [colSpan]="cs">TD3</td>
+  </tr>
+</table>
+
+<div [className]="myClassCombineVar">This is red text. combined in ts file</div>
+
+<div [className]="getClass1()">This is red text. from function</div>
+
+<div [className]="getClassToggle() ? myClass1Var : myClass2Var">This is red text. from Toggle function</div>
+
+<div [attr.class]="myClass1Var">This is red text. applied with attribute class</div>
+
+<div class="myClass1 myClass2">This is red text. applied by normal syntax</div>
+
+<div [class.myClass1] = "getClassToggle()" [class.myClass2] = "class2Toggle">With attribute binding - class tag</div>
+
+<div
+[style.color]="style1Var == false ? 'lightgreen' : 'white'"
+[style.background-color]="newStyle()"
+[style.border]="'5px solid black'"
+
+
+>Direct styling this is a string</div>
+
+<button (click)="onClick($event)">Click me</button>
+
+<button (dblclick)="onDblClick($event)">Double Click me</button>
+
+<button (mouseup)="onMouseUp($event)">Mouse up</button>
+
+<button (mousedown)="onMouseDown($event)">Mouse down</button>
+
+{{ twoWayData }}
+
+<input type="text" [(ngModel)]="inputVal"/>
+
+{{ inputVal }}
+
+
+<br/>
+<br/>
+<input type="text" [(ngModel)]="inputCollectData"/>
+<br/>
+<button (click)="CollectData($event)">Collect Data</button>
+
+<ul *ngFor="let data of collectedData" appColorchanger [bgColor]="'red'" [txtColor]="'white'">
+  <li>{{data}}</li>
+</ul>
+
+<div appColorchanger [bgColor]="'green'" [txtColor]="'white'">
+  The directive div
+</div>
+
+<div *ngIf="ngIfStatus || ngIfStatus2">
+  So, the ngIfStatus variable is true
+</div>
+
+<ng-template [ngIf]="ngIfStatus">
+  So, the ngIfStatus variable is true from seperate block
+</ng-template>
+
+<div *ngIf="ngIfStatus && ngIfStatus2">
+  So, the ngIfStatus variable is true
+</div>
+
+<div *ngIf="ngIfStatus && ngIfStatus2 == false;then thenBlock; else elseBlock">
+  So, the ngIfStatus variable is true
+</div>
+
+
+<ng-template #thenBlock>
+  This is then Block
+</ng-template>
+
+<ng-template #elseBlock>
+  This is the else block
+</ng-template>
+
+<ul *ngFor="let eachNgForArray of ngForArray">
+  <li>{{eachNgForArray}}</li>
+</ul>
+<h3>new list</h3>
+<ol *ngFor="let eachNgForArray2 of ngForArray2 let i = index">
+  <li>{{i}}) {{eachNgForArray2.id}} - {{eachNgForArray2.name}}, {{eachNgForArray2.subject}}</li>
+</ol>
+
+<div [ngSwitch]="ngSwitchSource">
+  <div *ngSwitchCase="'JavaScript'">So the source is Javascript</div>
+  <div *ngSwitchCase="'TypeScript'">So the source is Typescript</div>
+  <div *ngSwitchCase="'React'">So the source is React Library</div>
+  <div *ngSwitchCase="'Angular'">So the source is Angular Framework</div>
+  <div *ngSwitchDefault>Unable to find the source</div>
+</div>
+
+<router-outlet></router-outlet>
