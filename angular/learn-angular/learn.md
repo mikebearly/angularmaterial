@@ -1,7 +1,3 @@
-```
-
-```
-
 # Create new application
 
 ```
