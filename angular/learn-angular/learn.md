@@ -322,7 +322,7 @@ above and below are same
 ## Custom Structural Directives in Angular
 
 # Helpers
-[Angular 9 Document](https://v9.angular.io/docs)
-[Prime NG 9 Document](https://www.primefaces.org/primeng-v9-lts/#/)
-[Angular 9 Tutorials For Beginners](https://www.youtube.com/playlist?list=PLp50dWW_m40XgTvxNoxddGkir5kSpFFmK)
+[Angular 9 Document](https://v9.angular.io/docs)\
+[Prime NG 9 Document](https://www.primefaces.org/primeng-v9-lts/#/)\
+[Angular 9 Tutorials For Beginners](https://www.youtube.com/playlist?list=PLp50dWW_m40XgTvxNoxddGkir5kSpFFmK)\
 [Angular Material: Ultimate Masterclass With Angular 9 (2020)](https://www.udemy.com/course/angular-material-masterclass/)
